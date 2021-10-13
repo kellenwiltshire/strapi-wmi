@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -19,7 +19,7 @@
       "default": "Vendor"
     },
     "Image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images"
@@ -38,9 +38,9 @@
       "default": false,
       "required": true
     },
-    "Sale": {
-      "model": "sales",
-      "via": "Vendors"
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name"
     }
   }
 }
